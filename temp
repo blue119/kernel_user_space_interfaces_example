@@ -1,0 +1,21 @@
+getpid()                                = 24315
+fstat64(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 1), ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7eed000
+write(1, "mypid 24315\n", 12mypid 24315
+)           = 12
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGCHLD, NULL, {SIG_DFL}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+nanosleep({100, 0}, 0xbf8235a4)         = ? ERESTART_RESTARTBLOCK (To be restarted)
+--- SIGRT_12 (Real-time signal 10) @ 0 (0) ---
+write(1, "kernel value 128\n", 17kernel value 128
+)      = 17
+write(1, "kernel value -1209072186\n", 25kernel value -1209072186
+) = 25
+write(1, "pid 24315\n", 10pid 24315
+)             = 10
+rt_sigreturn(0xbf8235a4)                = -1 EINTR (Interrupted system call)
+write(1, "end", 3end)                      = 3
+exit_group(0)                           = ?
+Process 24315 detached
+
